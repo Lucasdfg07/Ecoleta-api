@@ -6,7 +6,7 @@
 	:white_check_mark: NextLevelWeek 1.0 🚀 Done :white_check_mark:
 </h4>
 <p align="center">
-  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Lucasdfg07/Ecoleta_api?color=%2304D361%22>
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Lucasdfg07/Ecoleta_api?color=%2304D361%22">
 	
   <a href="https://www.linkedin.com/in/lucas-siqueira-167362148/">
     <img alt="Made by Lucas Siqueira" src="https://img.shields.io/badge/made%20by-Lucasdfg07-%2304D361">
