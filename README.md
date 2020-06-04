@@ -7,8 +7,6 @@
 </h4>
 <p align="center">
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Lucasdfg07/Ecoleta_api?color=%2304D361%22>
-
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/Lucasdfg07/Ecoleta_api">
 	
   <a href="https://www.linkedin.com/in/lucas-siqueira-167362148/">
     <img alt="Made by Lucas Siqueira" src="https://img.shields.io/badge/made%20by-Lucasdfg07-%2304D361">
