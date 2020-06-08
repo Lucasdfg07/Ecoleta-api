@@ -15,6 +15,13 @@ class PointsController {
                                            .distinct()
                                            .select('points.*');
 
+        const serializedPoints = points.map(point => {
+            return {
+                ...point,
+                image_url: `http://localhost:3333/uploads/${point.image}`
+            };
+        });
+
         return response.json(points)
     }
 
@@ -26,6 +33,11 @@ class PointsController {
         if(!point) {
             return response.status(400).json({message: 'Point not found'});
         }
+
+        const serializedPoint = {
+            ...point,
+            image_url: `http://localhost:3333/uploads/${point.image}`,
+        };
 
         const items = await knex('items')
                             .join('point_items', 'items.id', '=', 'point_items.item_id')
@@ -49,7 +61,7 @@ class PointsController {
         const trx = await knex.transaction();
 
         const point = {
-            image: 'https://www.ubatuba.sp.gov.br/wp-content/uploads/sites/2/2019/12/lixo-770x416.jpg',
+            image: request.file.filename,
             name,
             email,
             whatsapp,
@@ -63,7 +75,7 @@ class PointsController {
     
         const point_id = insertedIds[0];
     
-        const pointItems = items.map((item_id: number) => {
+        const pointItems = items.split(',').map((item: string) => Number(item.trim())).map((item_id: number) => {
             return {
                 item_id,
                 point_id,
